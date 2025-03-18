@@ -19,9 +19,7 @@ public class BaseTest {
 
         @Before
         public void setUp() {
-            // WebDriverManager ile ChromeDriver'ı otomatik kur
             WebDriverManager.chromedriver().setup();
-
             driver = new ChromeDriver(getChromeOptions());
             driver.manage().window().maximize();
             driver.get(configReader.getFilePath("baseUrl"));
