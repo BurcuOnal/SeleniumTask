@@ -1,0 +1,12 @@
+[
+  {
+    "key": "careersQAPageTitle",
+    "value": "//h1[normalize-space()='Quality Assurance']",
+    "type": "xpath"
+  },
+  {
+    "key": "careersQAPageSeeAllJobsBtn",
+    "value": "div.button-group a.btn-outline-secondary",
+    "type": "css"
+  }
+]

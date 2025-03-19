@@ -1,0 +1,32 @@
+[
+  {
+    "key": "careersPageSeeAllTeamsBtn",
+    "value": "a.loadmore",
+    "type": "css"
+  },
+  {
+    "key": "careersPageTeamsSection",
+    "value": "career-find-our-calling",
+    "type": "id"
+  },
+  {
+    "key": "careersPageOurLocationsTitle",
+    "value": "//div/h3[contains(text(),'Our Locations')]",
+    "type": "xpath"
+  },
+  {
+    "key": "careersPageLocationsSection",
+    "value": "career-our-location",
+    "type": "id"
+  },
+  {
+    "key": "careersPageLifeaAtInsiderTitle",
+    "value": "//h2[(contains(@class,'elementor-heading-title')) and (contains(text(),'Life at Insider'))]",
+    "type": "xpath"
+  },
+  {
+    "key": "careersPageLifeaAtInsiderSection",
+    "value": "section.elementor-element-a8e7b90",
+    "type": "css"
+  }
+]

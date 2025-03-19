@@ -1,15 +1,17 @@
-package com.insider.methods;
+package com.useinsider.methods;
 
-import com.insider.driver.BaseTest;
-import com.insider.utils.LocatorHelper;
+import com.useinsider.driver.BaseTest;
+import com.useinsider.utils.LocatorHelper;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.time.Duration;
 import java.util.*;
@@ -22,6 +24,8 @@ public class BaseMethods {
     FluentWait<WebDriver> wait;
     JavascriptExecutor jsdriver;
     private LocatorHelper helper = new LocatorHelper();
+    public static int DEFAULT_MAX_ITERATION_COUNT = 150;
+    public static int DEFAULT_MILLISECOND_WAIT_AMOUNT = 100;
 
     public BaseMethods() {
         driver = BaseTest.driver;
@@ -175,5 +179,31 @@ public class BaseMethods {
         logger.info(key + " element clicked");
     }
 
+    public void waitByMilliSeconds(long milliseconds) {
+        try {
+            logger.info(milliseconds + " waited for milliseconds.");
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void checkURLContains(String expectedURL) {
+        int loopCount = 0;
+        String actualURL = "";
+        while (loopCount < DEFAULT_MAX_ITERATION_COUNT) {
+            actualURL = driver.getCurrentUrl();
+
+            if (actualURL != null && actualURL.contains(expectedURL)) {
+                logger.info("Current URL" + expectedURL + " has in it.");
+                return;
+            }
+            loopCount++;
+            waitByMilliSeconds(DEFAULT_MILLISECOND_WAIT_AMOUNT);
+        }
+        Assertions.fail(
+                "Actual URL doesn't match the expected." + "Expected: " + expectedURL + ", Actual: "
+                        + actualURL);
+    }
 
 }

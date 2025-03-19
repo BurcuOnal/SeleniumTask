@@ -1,0 +1,45 @@
+[
+  {
+    "key": "careersOpenPositionsPageTitle",
+    "value": "//h3[text()='All open positions']",
+    "type": "xpath"
+  }
+,
+ {
+      "key": "careersOpenPositionsFilterByLocationDropDown",
+      "value": "#filter-by-location + span",
+      "type": "css"
+ }
+,
+ {
+      "key": "careersOpenPositionLocationDropDownListIstanbul",
+      "value": "//li[contains(@id,'Istanbul')]",
+      "type": "xpath"
+    }
+,
+ {
+      "key": "careersOpenPositionLocationCheckIstanbul",
+      "value": "span[title=\"Istanbul, Turkiye\"]",
+      "type": "css"
+    }
+,
+  {
+    "key": "careersOpenPositionsFilterByDepartmentDropDown",
+    "value": "select2-filter-by-department-container",
+    "type": "id"
+  }
+,
+
+ {
+      "key": "careersOpenPositionDepartmentDropDownListQA",
+      "value": "//li[contains(@id,'Quality Assurance')]",
+      "type": "xpath"
+ }
+,
+  {
+    "key": "careersOpenPositionDepartmantCheckQA",
+    "value": "span[title=\"Quality Assurance\"]",
+    "type": "css"
+  }
+
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "key": "homePageInsiderLogo",
+    "value": "//img[@alt='insider_logo']",
+    "type": "xpath"
+  },
+  {
+    "key": "homePageAcceptCookiesBtn",
+    "value": "wt-cli-accept-all-btn",
+    "type": "id"
+  },
+  {
+    "key": "homePageCompanyDropdownMenu",
+    "value": "//a[(@id='navbarDropdownMenuLink') and (contains(text(),'Company'))]",
+    "type": "xpath"
+  },
+  {
+    "key": "homePageCompanyDropdownMenuCareersBtn",
+    "value": "//a[text()=\"Careers\"]",
+    "type": "xpath"
+  }
+]

@@ -1,4 +1,4 @@
-package com.insider.utils;
+package com.useinsider.utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
