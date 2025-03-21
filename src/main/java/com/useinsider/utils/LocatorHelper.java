@@ -24,7 +24,7 @@ public class LocatorHelper {
 
     public WebElement findElement(String locatorKey, WebDriver driver) {
         WebElement element = null;
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(50));
 
         try {
             File folder = new File(configReader.getFilePath("locatorPath"));

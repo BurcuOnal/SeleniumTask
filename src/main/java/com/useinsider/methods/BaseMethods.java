@@ -1,6 +1,6 @@
 package com.useinsider.methods;
 
-import com.useinsider.driver.BaseTest;
+import com.useinsider.base.BaseTest;
 import com.useinsider.utils.LocatorHelper;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -20,7 +20,7 @@ public class BaseMethods {
     protected static final Logger logger = Logger.getLogger(BaseMethods.class.getName());
     private static Map<String, String> savedValue = new HashMap<>();
     private static int sizeJobList = 0;
-    WebDriver driver;
+    public WebDriver driver;
     FluentWait<WebDriver> wait;
     JavascriptExecutor jsdriver;
     private LocatorHelper helper = new LocatorHelper();
@@ -29,7 +29,7 @@ public class BaseMethods {
 
     public BaseMethods() {
         driver = BaseTest.driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20), Duration.ofMillis(100)).ignoring(NoSuchElementException.class);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50), Duration.ofMillis(300)).ignoring(NoSuchElementException.class);
         jsdriver = (JavascriptExecutor) driver;
     }
 
@@ -37,9 +37,6 @@ public class BaseMethods {
         return helper.findElement(locatorKey, driver);
     }
 
-    protected By findElementInfoBy(String locatorKey) {
-        return helper.findElementInfoBy(locatorKey);
-    }
 
     protected void waitBySecond(int seconds) {
         try {
@@ -49,6 +46,10 @@ public class BaseMethods {
             throw new RuntimeException(e);
         }
     }
+    protected By findElementInfoBy(String locatorKey) {
+        return helper.findElementInfoBy(locatorKey);
+    }
+
 
 
     protected WebElement waitForElementToBeVisible(String locatorKey) {
@@ -118,7 +119,7 @@ public class BaseMethods {
     protected void checkIsTextContainsList(String key, String expectedValue) {
         List<WebElement> keys = findsElements(key);
         sizeJobList = keys.size();
-        int workQuantity = 1;
+        int workQuantity = 0;
         for (WebElement element : keys) {
             Assert.assertTrue("Text doesn't match", element.getText().contains(expectedValue));
             logger.info("In job option " + workQuantity + ", the content " + element.getText() + " contains the text " + expectedValue);

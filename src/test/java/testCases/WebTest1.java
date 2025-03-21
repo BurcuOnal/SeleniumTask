@@ -1,14 +1,16 @@
 package testCases;
 
-import com.useinsider.driver.BaseTest;
-import com.useinsider.pages.Home;
+import com.useinsider.base.BaseTest;
+import pages.Careers;
+import pages.CareersOpenPositions;
+import pages.CareersQA;
+import pages.Home;
 import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 public class WebTest1 extends BaseTest {
 
 
-    @BeforeEach
+    @Test
 
     public void testCase00() {
         /*
@@ -16,16 +18,45 @@ public class WebTest1 extends BaseTest {
         */
         Home homepage = new Home();
         homepage.checkHomePage();
+    }
+    @Test
+    public void testCase01() {
+        /*
+        testCase01: Navigate to the career page and check certain modules
+        if they are exist on the page or not
+         */
+        Home homepage = new Home();
+        Careers careerspage = new Careers();
+
+        homepage.checkHomePage();
+        homepage.navigateToCareerPage();
+        careerspage.checkCareerPage();
+        careerspage.visibilityOfTeamsModule();
+        careerspage.visibilityOfLocationsModule();
+        careerspage.visibilityOfLifeAtInsiderModule();
 
     }
 
     @Test
-    public void testCase01() {
-/*
-Navigate to the career page and certain locators
- */
-        Home homepage = new Home();
-        homepage.checkHomePage();
+    public void testCase02() {
+        /*
+        testCase02:
+        * Filter jobs by Location: “Istanbul, Turkey”, and Department: “Quality Assurance”,
+        check the presence of the jobs list.
+        * Check that all jobs’ Position contains “Quality Assurance”, Department contains “Quality Assurance”,
+        and Location contains “Istanbul, Turkey”
+        * Click the “View Role” button and check that this action redirects us to the Lever Application form page
+         */
+        CareersQA careersQA = new CareersQA();
+        CareersOpenPositions careersOpenPositions = new CareersOpenPositions();
+
+        careersQA.checkCareerQAPage();
+        careersQA.goToQAOpenPositions();
+        careersOpenPositions.checkCareersOpenPositionsPage();
+        careersOpenPositions.filterOpenPositions();
+        careersOpenPositions.checkOpenPositions();
+        careersOpenPositions.clickViewRoleBtn();
+
 
     }
 

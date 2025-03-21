@@ -41,5 +41,39 @@
     "value": "span[title=\"Quality Assurance\"]",
     "type": "css"
   }
+,
+  {
+    "key": "careersOpenPositionJobsPositionTitles",
+    "value": "p.position-title",
+    "type": "css"
+  }
+,
+  {
+    "key": "careersOpenPositionJobsPositionDepartment",
+    "value": "span.position-department",
+    "type": "css"
+  }
+,
+  {
+    "key": "careersOpenPositionJobPositionLocation",
+    "value": "div.position-location",
+    "type": "css"
+  },
 
+  {
+    "key": "sectionOfThePositionArea",
+    "value": "jobs-list",
+    "type": "id"
+  },
+  {
+    "key": "careersOpenPositionViewRoleBtn",
+    "value": "div.position-list div a",
+    "type": "css"
+  }
+,
+  {
+    "key": "checkSearchPageisOpen",
+    "value": "//span[@title=\"Quality Assurance\"]",
+    "type": "xpath"
+  }
 ]
