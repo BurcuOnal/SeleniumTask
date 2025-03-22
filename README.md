@@ -65,43 +65,14 @@ BurcuOnalSeleniumTask/
 ---
 
 ## Technologies & Dependencies
-This project is built using Java and Selenium, with the following dependencies:
+- **Programming Language:** Java  
+- **Test Framework:** JUnit 4 & JUnit 5  
+- **Web Automation:** Selenium WebDriver  
+- **Logging:** Log4j  
+- **JSON Parsing:** org.json  
+- **Driver Management:** WebDriverManager  
 
-```xml
-<dependencies>
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.13.2</version>
-    </dependency>
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.16.1</version>
-    </dependency>
-    <dependency>
-        <groupId>log4j</groupId>
-        <artifactId>log4j</artifactId>
-        <version>1.2.17</version>
-    </dependency>
-    <dependency>
-        <groupId>org.json</groupId>
-        <artifactId>json</artifactId>
-        <version>20231013</version>
-    </dependency>
-    <dependency>
-        <groupId>io.github.bonigarcia</groupId>
-        <artifactId>webdrivermanager</artifactId>
-        <version>5.7.0</version>
-    </dependency>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.11.4</version>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
-```
+For a complete list of dependencies, check the `pom.xml` file.
 
 ---
 ## Configuration
