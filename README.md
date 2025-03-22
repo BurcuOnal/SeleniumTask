@@ -4,62 +4,22 @@
 This project is a Selenium-based web test automation framework designed to validate the functionality of the **UseInsider** website. The test cases are implemented following the Page Object Model (POM) structure.
 
 ## Test Scope
-The automation covers the following scenarios:
-
-1. **Verify Homepage Accessibility:**
-   - Navigate to [UseInsider](https://useinsider.com/)
-   - Check if the homepage is successfully loaded.
-
-2. **Validate Career Page Navigation:**
-   - Click on the "Company" menu and navigate to "Careers."
-   - Verify that the **Careers Page**, **Locations**, **Teams**, and **Life at Insider** sections are displayed.
-
-3. **Filter QA Job Listings:**
-   - Open the [Quality Assurance Careers Page](https://useinsider.com/careers/quality-assurance/)
-   - Click "See all QA jobs."
-   - Apply filters: **Location: Istanbul, Turkey**, **Department: Quality Assurance**
-   - Verify that job listings are displayed.
-
-4. **Validate Job Listings Details:**
-   - Ensure all listed jobs contain:
-     - Position: "Quality Assurance"
-     - Department: "Quality Assurance"
-     - Location: "Istanbul, Turkey"
-
-5. **Check Job Application Redirection:**
-   - Click the "View Role" button on any job listing.
-   - Confirm that it redirects to the Lever application form page.
+This automation project focuses on verifying the key functionalities of the Careers page, ensuring that users can navigate through job listings, apply filters, view job descriptions, and navigating to another job application page.
 
 ---
 
 ## Project Structure
 ```
-BurcuOnalSeleniumTask/
-│── src/
-│   ├── main/
-│   │   ├── java/com/useinsider/
-│   │   │   ├── base/       # Base test class setup
-│   │   │   ├── methods/    # Common test methods
-│   │   │   ├── utils/      # Utility classes (e.g., ConfigReader, LocatorHelper)
-│   │
-│   ├── test/
-│   │   ├── java/pages/     # Page Object Model classes
-│   │   │   ├── Careers
-│   │   │   ├── CareersOpenPositions
-│   │   │   ├── CareersQA
-│   │   │   ├── Home
-│   │   │   ├── JobLever
-│   │   ├── java/testCases/ # Test execution class
-│   │   │   ├── WebTest1.java
-│   │   ├── resources/      # Configuration & Locators
-│   │   │   ├── elementValues/
-│   │   │   │   ├── careersOpenPositionsPage.json
-│   │   │   │   ├── careersPage.json
-│   │   │   │   ├── careersQAPage.json
-│   │   │   │   ├── homePage.json
-│   │   │   │   ├── jobLeverPage.json
-│   │   │   ├── config.properties
-│   │   │   ├── log4j.properties
+The project follows the Page Object Model (POM) design pattern.  
+
+- `src/main/java/com/useinsider/base` → Base setup and configurations  
+- `src/main/java/com/useinsider/methods` → Reusable helper methods  
+- `src/main/java/com/useinsider/utils` → Utility classes for configurations and locators  
+- `src/test/java/pages` → Page classes representing different sections  
+- `src/test/java/testCases` → Test case implementations  
+- `src/test/resources/elementValues` → JSON files storing locators  
+- `config.properties` → Stores base URLs and configurations  
+- `log4j.properties` → Logging configurations 
 ```
 
 ---
