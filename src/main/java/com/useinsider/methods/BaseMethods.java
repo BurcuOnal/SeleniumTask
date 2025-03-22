@@ -119,7 +119,7 @@ public class BaseMethods {
     protected void checkIsTextContainsList(String key, String expectedValue) {
         List<WebElement> keys = findsElements(key);
         sizeJobList = keys.size();
-        int workQuantity = 0;
+        int workQuantity = 1;
         for (WebElement element : keys) {
             Assert.assertTrue("Text doesn't match", element.getText().contains(expectedValue));
             logger.info("In job option " + workQuantity + ", the content " + element.getText() + " contains the text " + expectedValue);

@@ -1,0 +1,17 @@
+[
+  {
+    "key": "jobLeverPagejobTitle",
+    "value": "div.posting-headline h2",
+    "type": "css"
+  },
+  {
+    "key": "jobLeverPageJobLocation",
+    "value": "div.posting-headline div.posting-categories div.location",
+    "type": "css"
+  },
+  {
+    "key": "jobLeverPageJobDepartment",
+    "value": "div.posting-headline div.posting-categories div.department",
+    "type": "css"
+  }
+]

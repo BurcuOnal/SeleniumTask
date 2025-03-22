@@ -13,17 +13,16 @@ public class CareersOpenPositions extends BaseMethods {
 
     public void filterOpenPositions(){
 
-
       scrollToElementToBeVisible("careersOpenPositionsFilterByLocationDropDown");
       waitForElementToBeVisible("checkSearchPageisOpen");
       clickElement("careersOpenPositionsFilterByLocationDropDown");
       clickElement("careersOpenPositionLocationDropDownListIstanbul");
       checkForElement("careersOpenPositionLocationCheckIstanbul","Istanbul cannot be selected!");
-
+      waitBySecond(3);
       clickElement("careersOpenPositionsFilterByDepartmentDropDown");
       waitForElementToBeVisible("careersOpenPositionDepartmentDropDownListQA");
-
       clickElement("careersOpenPositionDepartmentDropDownListQA");
+      waitBySecond(3);
       checkForElement("careersOpenPositionDepartmantCheckQA","QA cannot be selected!");
       waitBySecond(3);
     }
@@ -31,14 +30,10 @@ public class CareersOpenPositions extends BaseMethods {
     public void checkOpenPositions(){
         scrollToElementToBeVisible("sectionOfThePositionArea");
         waitForElementToBeVisible("careersOpenPositionJobsPositionTitles");
-        waitBySecond(5);
-        //checkIsTextContainsList("careersOpenPositionJobsPositionTitles", "Quality Assurance");
-       // waitBySecond(3);
-        //saveValueLastJob("careersOpenPositionJobsPositionTitles");
-       // waitBySecond(3);
         checkIsTextContainsList("careersOpenPositionJobsPositionDepartment", "Quality Assurance");
         saveValueLastJob("careersOpenPositionJobsPositionDepartment");
-        checkIsTextContainsList("careersOpenPositionJobPositionLocation", "Istanbul, Turkey");
+        waitBySecond(3);
+        checkIsTextContainsList("careersOpenPositionJobPositionLocation", "Istanbul, Turkiye");
         saveValueLastJob("careersOpenPositionJobPositionLocation");
         waitBySecond(1);
     }
@@ -46,7 +41,7 @@ public class CareersOpenPositions extends BaseMethods {
     public void clickViewRoleBtn() {
         hoverOverElementWithSelectedSize("careersOpenPositionViewRoleBtn");
         clickElementWithSelectedSize("careersOpenPositionViewRoleBtn");
-        logger.info("Seçilen Job ekranına gidiliyor");
+        logger.info("navigating to the job lever page");
 
     }
 
